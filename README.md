@@ -30,11 +30,25 @@ const dir = 'files';
 const tokens = '12345'
 const domain = 'example.com'
 ```
+
+```js
+res.render('embed', {
+    imglink: `https://${domain}/${image}`,
+    file: req.params.filename + ` | ${image}`,
+    // Config
+    title: `Simple Uploader`,
+    description: `created by kameHame HA`,
+    color: `#ffffff`
+})
+```
 Find this code in `app.js`. 
 * **port** - web app server port
 * **dir** - folder where you want to store uploaded files
 * **tokens** - special token to make sure that only you have access to uploader
 * **domain** - name of domain you will be using for uploader
+* **title** - embed title
+* **description** - embed description
+* **color** - embed color
 
 Configure this how you want 🙂
 ### Sharex custom uploader:
