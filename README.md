@@ -29,6 +29,8 @@ const port = 80;
 const dir = 'files';
 const tokens = '12345'
 const domain = 'example.com'
+
+embedSupport = false
 ```
 
 ```js
