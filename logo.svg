@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1280 640" style="enable-background:new 0 0 1280 640;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;fill:#3A3A3A;}
+	.st1{display:none;}
+	.st2{display:inline;fill:#B85557;}
+	.st3{fill:none;}
+	.st4{fill:#C9C8C8;}
+	.st5{font-family:'ProximaNova-Extrabld';}
+	.st6{font-size:90px;}
+	.st7{font-family:'ProximaNova-Regular';}
+	.st8{font-size:35px;}
+</style>
+<rect x="0.02" y="0" class="st0" width="1279.98" height="640"/>
+<g id="Border" class="st1">
+	<rect x="0.02" y="0" class="st2" width="79.98" height="640"/>
+	<rect x="1200.02" class="st2" width="79.98" height="640"/>
+	
+		<rect x="600.02" y="-520.02" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 680.0024 -600.0165)" class="st2" width="79.98" height="1120.02"/>
+	
+		<rect x="600.02" y="40" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 1240.0212 -39.9977)" class="st2" width="79.98" height="1120.02"/>
+</g>
+<rect x="80" y="79.98" class="st3" width="1120.02" height="480.04"/>
+<text transform="matrix(1 0 0 1 296.0791 320.0171)"><tspan x="0" y="0" class="st4 st5 st6">Simple Uploader</tspan><tspan x="190.76" y="60" class="st4 st7 st8">With sharex support</tspan></text>
+</svg>
