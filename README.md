@@ -40,7 +40,7 @@ Configure this how you want 🙂
 ### Sharex custom uploader:
 Open sharex main window, goto: `Destinations -> Custom uploader settings`, click `New`. Nez copy those settings:
 
-<img width="750px" src="https://kame.tk/ULQXe.png">
+<img width="750px" src="https://user-images.githubusercontent.com/80411896/159130187-eca00d5a-62c0-4c7f-b593-77f688bbd734.png">
 
 Then change `Image uploader` & `File uploader` to your new custom uploader
 
