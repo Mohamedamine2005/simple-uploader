@@ -82,11 +82,9 @@ app.post('/sharex', (req, res) => {
 // Embed support
 if(embedSupport === true) {
     app.get(`/:filename`, (req, res) => {
-        console.log(`Request catched`)
         const uploads = fs.readdirSync(dir)
         
         const image = uploads.find(x => x.endsWith(`.png`) && x.replace(`.png`, ``) === req.params.filename)
-        console.log(image)
     
         if(image) {
             res.render('embed', {
