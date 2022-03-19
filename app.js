@@ -5,9 +5,11 @@ const app = express();
 
 // Cofiguration
 const port = 80;
-const dir = 'files';
+const dir = './files';
 const tokens = '12345'
 const domain = 'example.com'
+
+const embedSupport = false
 
 const formidable = require('formidable')
 
@@ -29,13 +31,15 @@ app.post('/upload', (req, res) => {
         form.parse(req, (err, fields, files) => {
             const token = fields.token
             const oldPath = files.somefile.filepath
-            const newPath = `./${dir}/${files.somefile.originalFilename}`
+            const newPath = `${dir}/${files.somefile.originalFilename}`
+
+            let fileName = embedSupport ? files.somefile.originalFilename.replace(`.png`, ``) : files.somefile.originalFilename;
     
             if(tokens === token) {
                 fs.rename(oldPath, newPath, (err) => {
                     if(err) throw err;
                     res.writeHead(200, {'Content-Type': 'text/html'})
-                    res.write(`File has been uploaded successfully!\n\nFile name: ${files.somefile.originalFilename}\nPath: ${newPath}\n`)
+                    res.write(`File has been uploaded successfully!<br>Link: https://${domain}/${fileName}`)
                     res.end()
                 })
             } else {
@@ -54,13 +58,15 @@ app.post('/sharex', (req, res) => {
         form.parse(req, (err, fields, files) => {
             const token = fields.token
             const oldPath = files.somefile.filepath
-            const newPath = `./${dir}/${files.somefile.originalFilename}`
+            const newPath = `${dir}/${files.somefile.originalFilename}`
+
+            let fileName = embedSupport ? files.somefile.originalFilename.replace(`.png`, ``) : files.somefile.originalFilename;
 
             if(tokens === token) {
                 fs.rename(oldPath, newPath, (err) => {
                     if(err) throw err;
                     res.writeHead(200, {'Content-Type': 'text/json'})
-                    res.write(`https://${domain}/${files.somefile.originalFilename}`)
+                    res.write(`https://${domain}/${fileName}`)
                     res.end()
                 })
             } else {
@@ -72,5 +78,27 @@ app.post('/sharex', (req, res) => {
         res.write(`Try again`)
     }
 })
+
+// Embed support
+if(embedSupport === true) {
+    app.get(`/:filename`, (req, res) => {
+        console.log(`Request catched`)
+        const uploads = fs.readdirSync(dir)
+        
+        const image = uploads.find(x => x.endsWith(`.png`) && x.replace(`.png`, ``) === req.params.filename)
+        console.log(image)
+    
+        if(image) {
+            res.render('embed', {
+                imglink: `https://${domain}/${image}`,
+                file: req.params.filename + ` | ${image}`,
+                // Config
+                title: `Simple uploader`,
+                description: `created by kameHame HA`,
+                color: `#ffffff`
+            })
+        }
+    })
+}
 
 app.listen(port, () => console.log(`Uploader working on port ${port}`))
