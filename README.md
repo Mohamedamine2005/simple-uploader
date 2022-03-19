@@ -5,7 +5,7 @@ This code is nodejs version of source that my friend **GDLev**.
 
 He is open source creator such as I, you can discover his work by clicking there: [Click!](https://github.com/GDLev)
 
-He also created a good frontend tat is fully compitable with my code: [uploadpopup](https://github.com/GDLev/uploadpopup)
+**He also created a good frontend tat is fully compitable with my code: [uploadpopup](https://github.com/GDLev/uploadpopup)**
 
 All my codes can be used for free in non commercial usage. If you want to support me just click **star** button and don't delete author info from code
 
