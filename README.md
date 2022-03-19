@@ -38,7 +38,7 @@ Find this code in `app.js`.
 
 Configure this how you want 🙂
 ### Sharex custom uploader:
-Open sharex main window, goto: `Destinations -> Custom uploader settings`, click `New`. Nez copy those settings:
+Open sharex main window, goto: `Destinations -> Custom uploader settings`, click `New`. Next copy those settings:
 
 <img width="750px" src="https://user-images.githubusercontent.com/80411896/159130187-eca00d5a-62c0-4c7f-b593-77f688bbd734.png">
 
