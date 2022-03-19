@@ -40,7 +40,7 @@ Open sharex main window, goto: `Destinations -> Custom uploader settings`, click
 
 <img width="750px" src="https://kame.tk/ULQXe.png">
 
-Then change `Image uploader` $ `File uploader` to your new custom uploader
+Then change `Image uploader` & `File uploader` to your new custom uploader
 
 ### Web uploader
 Goto: `<YOUR_DOMAIN>/`, choose file & provide valid token, click `Upload` and have fun!
